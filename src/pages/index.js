@@ -1,22 +1,47 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
+// COMPONENTS
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import About from "../components/aboutSection/about"
+import Projects from "../components/projectSection/projects"
+import Hero from "../components/heroSection/hero"
+import Timeline from "../components/timelineSection/timeline"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const aboutData = {
+    profileImage: data.sanityAuthor.profileImage.asset.fluid,
+    name: data.sanityAuthor.name,
+    introduction: data.sanityAuthor.introduction,
+  }
+
+  return (
+    <Layout>
+      <SEO />
+      <Hero name={data.sanityAuthor.name} email={data.sanityAuthor.email} />
+      <About data={aboutData} />
+      <Timeline />
+      <Projects />
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    sanityAuthor(name: { eq: "Guilherme Guerreiro" }) {
+      name
+      introduction
+      email
+      profileImage {
+        asset {
+          fluid {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

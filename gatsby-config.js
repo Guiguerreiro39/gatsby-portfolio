@@ -1,34 +1,46 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Guilherme Guerreiro`,
+    description: `I'm a Software Engineer with deep knowledge in numerous up-to-date programming languages and frameworks.
+    My skills can range from Full Stack Web and Mobile Development to Machine Learning, 
+    and my appetite for learning new and innovative technologies is unlimited!`,
+    author: `Guilherme Guerreiro`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-sanity`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        projectId: `zj7qjbn9`,
+        dataset: `production`,
+        overlayDrafts: true,
+        watchMode: true,
+        token:
+          "skH4vMtaYxTQRTEW8TghHQZgvz1ZX41zYOfqrhFI9wfe462PuIdbp04xlXBP6YdVzDA7F1UZu45RM3rTliif2Hq7VPX1gOEm18G3Q6Jz4aSc7U9udPuL8KF2K4FHJMtEYPy8cUa6zOIyI1U1LAvnC56YMriUXX6TdTVOEUekSfTNy4csqBlK",
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-fontawesome-css`,
   ],
 }

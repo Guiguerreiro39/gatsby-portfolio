@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+$font-logo: "Permanent Marker", cursive;
+
+:export {
+  fontLogo: $font-logo;
+}
+
+html {
+  height: 100%;
+  overflow: scroll;
+  @apply bg-gray-300;
+}
+body {
+  min-height: 100%;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.inset {
+  transition: clip-path 0.25s ease-out;
+  -webkit-transition: -webkit-clip-path 0.25s ease-out;
+  -webkit-clip-path: inset(0);
+  clip-path: inset(0);
+}
+.inset:hover {
+  -webkit-clip-path: inset(1rem);
+  clip-path: inset(1rem);
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+div.vertical-timeline::before {
+  background-color: #e2e8f0;
+}
+
+span.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #edf2f7, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
