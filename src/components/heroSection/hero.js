@@ -21,7 +21,7 @@ const Hero = ({ email, name }) => {
 
   const ColRight = () => (
     <div className="col-span-1 flex flex-col items-center justify-end text-lg">
-      <Social styleClass="mb-5 hover:text-red-500" />
+      <Social styleItem="mb-5 hover:text-red-500" />
       <LineVertical />
     </div>
   )

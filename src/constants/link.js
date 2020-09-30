@@ -1,8 +1,8 @@
 const linkData = [
   {
     id: 1,
-    name: "About Me",
-    url: "/#about",
+    name: "Why Me",
+    url: "/#why_me",
   },
   {
     id: 2,

@@ -18,7 +18,7 @@ const Card = ({ icon, title, categories }) => {
         <div className="px-6 py-4 flex flex-col items-center text-center mt-12">
           <h3 className="font-bold text-xl mb-2">{title}</h3>
           <Line height="3px" width="3rem" />
-          <ul className="flex items-center justify-center flex-wrap mx-8">
+          <ul className="flex items-center justify-center flex-wrap mx-1">
             {categories.map((category, index) => (
               <li
                 key={index}

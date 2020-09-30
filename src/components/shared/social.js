@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Social = ({ styleClass }) => {
+const Social = ({ styleItem, styleList }) => {
   const data = useStaticQuery(graphql`
     query {
       sanityAuthor(name: { eq: "Guilherme Guerreiro" }) {
@@ -52,13 +52,13 @@ const Social = ({ styleClass }) => {
     return (
       <li key={link.id}>
         <Link to={link.url} target="_blank">
-          <FontAwesomeIcon icon={link.icon} className={styleClass} />
+          <FontAwesomeIcon icon={link.icon} className={styleItem} />
         </Link>
       </li>
     )
   })
 
-  return <ul>{links}</ul>
+  return <ul className={styleList}>{links}</ul>
 }
 
 export default Social

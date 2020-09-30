@@ -50,7 +50,7 @@ const HeroText = ({ name }) => (
       </h2>
     </div>
     <div className="text-center mb-10">
-      <HeroButton to="/contact">Call me, maybe</HeroButton>
+      <HeroButton to="/#contact">Call me, maybe</HeroButton>
       <HeroButton className="mx-4" to="/projects">
         My CV
       </HeroButton>

@@ -33,11 +33,10 @@ module.exports = {
     },
   },
   variants: {
-    borderWidth: ["responsive", "hover"],
     fontSize: ["hover"],
-    borderWidth: ["first"],
-    backgroundColor: ["hover"],
+    borderWidth: ["first", "responsive", "hover"],
     backgroundOpacity: ["hover"],
+    backgroundColor: ["hover"],
   },
   plugins: [],
 }

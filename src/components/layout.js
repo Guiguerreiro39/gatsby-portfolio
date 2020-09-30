@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 
 // COMPONENT
 import Header from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   if (typeof window !== "undefined") {
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
     <main className="text-gray-800">
       <Header />
       {children}
+      <Footer />
     </main>
   )
 }

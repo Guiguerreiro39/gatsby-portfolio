@@ -15,7 +15,7 @@ const Header = () => {
   ])
 
   const NavBar = () => (
-    <nav className="flex justify-between items-center px-8 text-gray-300">
+    <nav className="flex justify-between items-center px-8 text-gray-100">
       <Logo to="/#Hero">GG</Logo>
       <div className="text-sm font-bold">
         <Links />
@@ -30,11 +30,13 @@ const Header = () => {
 
   const [navBackground, setNavBackground] = useState("py-6 absolute")
   const navRef = useRef()
-  navRef.current = window.pageYOffset + 100
+  navRef.current =
+    typeof window !== `undefined` ? window.pageYOffset + 100 : null
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollpos = window.pageYOffset
+      const currentScrollpos =
+        typeof window !== `undefined` ? window.pageYOffset : null
 
       if (currentScrollpos === 0) {
         setNavBackground("py-6 absolute")
