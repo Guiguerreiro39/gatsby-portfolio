@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
       <Hero name={data.sanityAuthor.name} email={data.sanityAuthor.email} />
       <About data={aboutData} />
       <Timeline />
-      <Projects />
+      <Projects github={data.sanityAuthor.github} />
       <Contact />
     </Layout>
   )
@@ -35,6 +35,7 @@ export const query = graphql`
       name
       introduction
       email
+      github
       profileImage {
         asset {
           fluid {

@@ -1,7 +1,7 @@
 import React from "react"
 
 const Form = () => (
-  <form className="text-center container m-auto" netlify>
+  <form className="text-center container m-auto" data-netlify="true">
     <div className="grid grid-cols-2 justify-center items-center mb-10 text-gray-800">
       <div className="grid grid-rows-3 gap-5 mr-10 ">
         <input

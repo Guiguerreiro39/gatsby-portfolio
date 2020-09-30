@@ -9,9 +9,6 @@ import Line from "../shared/line"
 
 const query = graphql`
   query {
-    sanityAuthor(name: { eq: "Guilherme Guerreiro" }) {
-      github
-    }
     allSanityProject {
       nodes {
         title
@@ -36,7 +33,7 @@ const query = graphql`
   }
 `
 
-const Projects = () => {
+const Projects = ({ github }) => {
   const data = useStaticQuery(query)
 
   return (
@@ -50,7 +47,7 @@ const Projects = () => {
             Check out all of my open source projects!
           </h2>
           <Link
-            to={data.sanityAuthor.github}
+            to={github}
             target="_blank"
             className="rounded-lg bg-gray-800 text-gray-100 p-3 text-xl hover:bg-gray-700"
           >

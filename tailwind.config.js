@@ -9,6 +9,8 @@ module.exports = {
       backgroundImage: theme => ({
         "hero-background": 'url("../assets/images/hero_background.jpg")',
         "contact-background": 'url("../assets/images/contact_background.jpg")',
+        "timeline-background":
+          'url("../assets/images/timeline_background.jpg")',
       }),
       fontSize: theme => ({
         "8xl": "5rem",

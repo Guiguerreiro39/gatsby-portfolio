@@ -6,7 +6,7 @@ import TimelineEvent from "./timelineEvent"
 const Timeline = () => {
   return (
     <section
-      className="bg-hero-background bg-center bg-cover bg-fixed h-full"
+      className="bg-timeline-background bg-center bg-cover bg-fixed h-full"
       id="timeline"
     >
       <div className="bg-gray-800 bg-opacity-75">
