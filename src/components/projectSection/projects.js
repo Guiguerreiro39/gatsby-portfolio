@@ -42,7 +42,7 @@ const Projects = () => {
   return (
     <section className="bg-gray-300" id="projects">
       <div className="container m-auto py-20">
-        <h1 className="text-4xl mb-1">My Projects</h1>
+        <h1 className="text-4xl mb-1 font-bold">My Projects</h1>
         <Line width="4rem" height="3px" />
         <ProjectCards nodes={data.allSanityProject.nodes} />
         <div className="text-center">

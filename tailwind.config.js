@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         "hero-background": 'url("../assets/images/hero_background.jpg")',
+        "contact-background": 'url("../assets/images/contact_background.jpg")',
       }),
       fontSize: theme => ({
         "8xl": "5rem",
@@ -20,6 +21,9 @@ module.exports = {
       }),
       inset: theme => ({
         "1/2n": "-50%",
+      }),
+      boxShadow: theme => ({
+        outline: "0 0 0 2px rgba(245, 101, 101, 0.75)",
       }),
     },
     borderWidth: {

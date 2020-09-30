@@ -8,6 +8,7 @@ import About from "../components/aboutSection/about"
 import Projects from "../components/projectSection/projects"
 import Hero from "../components/heroSection/hero"
 import Timeline from "../components/timelineSection/timeline"
+import Contact from "../components/contactSection/contact"
 
 const IndexPage = ({ data }) => {
   const aboutData = {
@@ -23,6 +24,7 @@ const IndexPage = ({ data }) => {
       <About data={aboutData} />
       <Timeline />
       <Projects />
+      <Contact />
     </Layout>
   )
 }

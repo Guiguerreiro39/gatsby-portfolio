@@ -53,7 +53,7 @@ const Hero = ({ email, name }) => {
       id="Hero"
     >
       <div className="h-screen bg-gray-800 bg-opacity-75">
-        <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-300">
+        <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100">
           <ColRight />
           <div className="col-span-10 flex flex-col justify-between pt-40 pb-5">
             <HeroText name={name} />

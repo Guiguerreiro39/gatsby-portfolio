@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Guilherme Guerreiro`,
@@ -17,12 +21,11 @@ module.exports = {
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `zj7qjbn9`,
-        dataset: `production`,
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
         overlayDrafts: true,
         watchMode: true,
-        token:
-          "skH4vMtaYxTQRTEW8TghHQZgvz1ZX41zYOfqrhFI9wfe462PuIdbp04xlXBP6YdVzDA7F1UZu45RM3rTliif2Hq7VPX1gOEm18G3Q6Jz4aSc7U9udPuL8KF2K4FHJMtEYPy8cUa6zOIyI1U1LAvnC56YMriUXX6TdTVOEUekSfTNy4csqBlK",
+        token: process.env.SANITY_TOKEN,
       },
     },
     {
