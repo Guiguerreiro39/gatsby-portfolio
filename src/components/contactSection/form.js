@@ -31,6 +31,7 @@ const Form = () => (
           className="bg-gray-300 bg-opacity-75 p-4 placeholder-gray-600 focus:shadow-outline outline-none"
         />
       </div>
+      <input type="hidden" name="form-name" value="contact" />
       <textarea
         name="content"
         placeholder="Write me something nice.."
@@ -40,7 +41,7 @@ const Form = () => (
     </div>
     <button
       type="submit"
-      className="border-3 border-gray-100 text-2xl p-3 rounded-lg hover:border-red-500 hover:text-red-500 focus:outline-none"
+      className="bg-red-500 text-2xl p-3 rounded-lg hover:bg-red-400 focus:outline-none bg-opacity-75 hover:bg-opacity-75"
     >
       Send message!
     </button>
