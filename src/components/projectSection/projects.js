@@ -47,12 +47,12 @@ const Projects = () => {
         <ProjectCards nodes={data.allSanityProject.nodes} />
         <div className="text-center">
           <h2 className="mb-8 text-2xl">
-            Check out more of my open source projects!
+            Check out all of my open source projects!
           </h2>
           <Link
             to={data.sanityAuthor.github}
             target="_blank"
-            className="rounded-lg bg-gray-800 text-gray-100 p-3 text-xl hover:text-2xl transition-all duration-100"
+            className="rounded-lg bg-gray-800 text-gray-100 p-3 text-xl hover:bg-gray-700"
           >
             <h3 className="inline-block pr-2">Github</h3>
             <FontAwesomeIcon icon={faGithub} className="inline-block" />

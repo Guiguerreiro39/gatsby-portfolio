@@ -10,10 +10,10 @@ const Card = ({ icon, title, categories }) => {
       <div className="rounded overflow-hidden shadow-lg bg-gray-200 m-5 col-span-1 h-56">
         <div
           className="rounded-full w-20 h-20 flex items-center justify-center
-          border-none shadow-lg absolute align-middle left-0 right-0 mx-auto bg-red-500"
+          border-none shadow-lg absolute align-middle left-0 right-0 mx-auto bg-red-500 text-4xl"
           css={["top:-5%;"]}
         >
-          <FontAwesomeIcon icon={icon} className="text-4xl my-3" />
+          <FontAwesomeIcon icon={icon} className="my-3" />
         </div>
         <div className="px-6 py-4 flex flex-col items-center text-center mt-12">
           <h3 className="font-bold text-xl mb-2">{title}</h3>
