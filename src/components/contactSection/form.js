@@ -37,7 +37,10 @@ const Form = () => (
         required
       />
     </div>
-    <button className="border-3 border-gray-100 text-2xl p-3 rounded-lg hover:border-red-500 hover:text-red-500 outline-none">
+    <button
+      type="submit"
+      className="border-3 border-gray-100 text-2xl p-3 rounded-lg hover:border-red-500 hover:text-red-500 focus:outline-none"
+    >
       Send message!
     </button>
   </form>
