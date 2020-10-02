@@ -1,4 +1,5 @@
 import React from "react"
+import { Fade } from "react-reveal"
 
 //COMPONENTS
 import Card from "./card"
@@ -8,16 +9,20 @@ import skillData from "../../constants/skill"
 
 const Skills = () => {
   return (
-    <div className="grid grid-cols-3 items-center container m-auto px-20">
-      {skillData.map(skill => (
-        <Card
-          key={skill.id}
-          icon={skill.icon}
-          title={skill.title}
-          categories={skill.categories}
-        />
-      ))}
-    </div>
+    <Fade cascade bottom>
+      <ul className="grid grid-cols-3 items-center container m-auto px-20">
+        {skillData.map(skill => (
+          <li>
+            <Card
+              key={skill.id}
+              icon={skill.icon}
+              title={skill.title}
+              categories={skill.categories}
+            />
+          </li>
+        ))}
+      </ul>
+    </Fade>
   )
 }
 

@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="px-10 flex items-center justify-center bg-gray-800 text-gray-100 h-48">
       <div>
         <Social
-          styleItem="mx-5 hover:text-red-500"
+          styleItem="mx-5 hover:-translate-y-1 transform duration-500 hover:text-red-500"
           styleList="flex text-3xl justify-center"
         />
         <div className="mt-4">

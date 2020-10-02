@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
@@ -7,7 +7,6 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons"
-import { useStaticQuery, graphql } from "gatsby"
 
 const Social = ({ styleItem, styleList }) => {
   const data = useStaticQuery(graphql`

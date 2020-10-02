@@ -1,5 +1,6 @@
 import React from "react"
 import tw, { css } from "twin.macro"
+import { Roll, Flip } from "react-reveal"
 
 // COMPONENTS
 import Mouse from "./mouse"
@@ -20,8 +21,8 @@ const Hero = ({ email, name }) => {
   )
 
   const ColRight = () => (
-    <div className="col-span-1 flex flex-col items-center justify-end text-lg">
-      <Social styleItem="mb-5 hover:text-red-500" />
+    <div className="col-span-1 flex flex-col items-center justify-end text-lg h-full">
+      <Social styleItem="mb-5 hover:-translate-y-1 transform duration-500 hover:text-red-500" />
       <LineVertical />
     </div>
   )
@@ -41,7 +42,7 @@ const Hero = ({ email, name }) => {
   )
 
   const ColLeft = () => (
-    <div className="col-span-1 flex flex-col items-center justify-end">
+    <div className="col-span-1 flex flex-col items-center justify-end h-full">
       <EmailVertical />
       <LineVertical />
     </div>
@@ -54,12 +55,18 @@ const Hero = ({ email, name }) => {
     >
       <div className="h-screen bg-gray-800 bg-opacity-75">
         <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100">
-          <ColRight />
+          <Flip right delay={3000}>
+            <ColRight />
+          </Flip>
           <div className="col-span-10 flex flex-col justify-between pt-40 pb-5">
             <HeroText name={name} />
-            <Mouse />
+            <Roll delay={3000}>
+              <Mouse />
+            </Roll>
           </div>
-          <ColLeft />
+          <Flip left delay={3000}>
+            <ColLeft />
+          </Flip>
         </div>
       </div>
     </section>

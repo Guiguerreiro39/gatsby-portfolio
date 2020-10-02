@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
       <About data={aboutData} />
       <Timeline />
       <Projects github={data.sanityAuthor.github} />
-      <Contact />
+      <Contact email={data.sanityAuthor.email} />
     </Layout>
   )
 }

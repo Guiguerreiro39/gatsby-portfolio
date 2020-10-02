@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 import tw, { styled, css } from "twin.macro"
 import variables from "../styles/global.scss"
+import { Fade } from "react-reveal"
 
 // COMPONENTS
 import Links from "./shared/links"
@@ -17,16 +18,19 @@ const Header = () => {
   const NavBar = () => (
     <nav className="flex justify-between items-center px-8 text-gray-100">
       <Logo to="/#Hero">GG</Logo>
-      <div className="text-sm font-bold">
+      <div className="text-sm font-bold flex">
         <Links />
-        <HeaderButton to="/resume">Resume</HeaderButton>
+        <div className="transform hover:scale-110 duration-300">
+          <Link
+            to="/resume"
+            className="mx-4 p-2 border-white border-2 rounded hover:border-red-500 hover:text-red-500"
+          >
+            Resume
+          </Link>
+        </div>
       </div>
     </nav>
   )
-
-  const HeaderButton = styled(Link)([
-    tw`mx-4 p-2 border-white border-2 rounded hover:border-red-500 hover:text-red-500`,
-  ])
 
   const [navBackground, setNavBackground] = useState("py-6 absolute")
   const navRef = useRef()
@@ -58,11 +62,13 @@ const Header = () => {
   }, [])
 
   return (
-    <header
-      className={`w-full transition-all duration-500 z-10 ${navBackground}`}
-    >
-      <NavBar />
-    </header>
+    <Fade top delay={3000}>
+      <header
+        className={`w-full transition-all duration-500 z-10 ${navBackground}`}
+      >
+        <NavBar />
+      </header>
+    </Fade>
   )
 }
 
