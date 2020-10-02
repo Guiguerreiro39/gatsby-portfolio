@@ -10,7 +10,7 @@ const Links = () =>
       <Link
         key={link.id}
         to={link.url}
-        className="mx-4 border-red-500 hover:text-red-500"
+        className="mx-4 border-red-500 underlineLink pb-1"
       >
         {link.name}
       </Link>

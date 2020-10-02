@@ -12,9 +12,8 @@ const Skills = () => {
     <Fade cascade bottom>
       <ul className="grid grid-cols-3 items-center container m-auto px-20">
         {skillData.map(skill => (
-          <li>
+          <li key={skill.id}>
             <Card
-              key={skill.id}
               icon={skill.icon}
               title={skill.title}
               categories={skill.categories}

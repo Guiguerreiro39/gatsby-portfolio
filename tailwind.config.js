@@ -44,6 +44,7 @@ module.exports = {
     backgroundOpacity: ["hover"],
     backgroundColor: ["hover"],
     scale: ["responsive", "hover", "focus", "active"],
+    width: ["responsive", "hover"],
   },
   plugins: [],
 }

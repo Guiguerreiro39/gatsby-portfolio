@@ -18,7 +18,7 @@ const Header = () => {
   const NavBar = () => (
     <nav className="flex justify-between items-center px-8 text-gray-100">
       <Logo to="/#Hero">GG</Logo>
-      <div className="text-sm font-bold flex">
+      <div className="text-base font-bold flex">
         <Links />
         <div className="transform hover:scale-110 duration-300">
           <Link

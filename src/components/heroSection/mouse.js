@@ -19,7 +19,7 @@ const Mouse = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-8 w-5 border-gray-300 border-3 rounded-t-full rounded-b-full flex justify-center mb-3">
+      <div className="h-8 w-5 border-gray-300 border-3 rounded-t-full rounded-b-full flex justify-center mb-3 animate-bounce">
         <div
           className="h-2 w-1 bg-red-500 mt-1 rounded-t-lg rounded-b-lg"
           css={[

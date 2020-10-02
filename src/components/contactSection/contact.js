@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Flip } from "react-reveal"
 
 //COMPONENTS
@@ -15,9 +14,9 @@ const Contact = ({ email }) => {
         <div className="text-center">
           <Flip cascade left>
             <h1 className="text-4xl font-bold">Contact me!</h1>
-            <Link to="/" className="text-xl text-red-500 hover:underline">
-              {email}
-            </Link>
+            <a href={`mailto:${email}`}>
+              <p className="text-xl text-red-500 hover:underline">{email}</p>
+            </a>
             <p className="my-8">
               If you're shy, you can always use this form instead..
             </p>
