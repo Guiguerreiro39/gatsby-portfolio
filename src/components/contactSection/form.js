@@ -44,14 +44,16 @@ const Form = () => (
         />
       </LightSpeed>
     </div>
-    <Rotate bottom left>
-      <button
-        type="submit"
-        className="bg-red-500 text-2xl p-3 rounded-lg hover:bg-red-400 focus:outline-none bg-opacity-75 hover:bg-opacity-75"
-      >
-        Send message!
-      </button>
-    </Rotate>
+    <div className="transform hover:scale-110 duration-300 inline-block">
+      <Rotate bottom left>
+        <button
+          type="submit"
+          className="bg-red-500 text-2xl p-3 rounded-lg focus:outline-none bg-opacity-75"
+        >
+          Send message!
+        </button>
+      </Rotate>
+    </div>
   </form>
 )
 

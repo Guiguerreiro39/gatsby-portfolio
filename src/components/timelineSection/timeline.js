@@ -1,10 +1,30 @@
 import React from "react"
 import { Flip } from "react-reveal"
+import { useStaticQuery, graphql } from "gatsby"
+import { VerticalTimeline } from "react-vertical-timeline-component"
 
 //COMPONENTS
 import TimelineEvent from "./timelineEvent"
 
+const query = graphql`
+  query {
+    allSanityTimeline(sort: { fields: initialDate }) {
+      nodes {
+        title
+        description
+        experience
+        id
+        technologies
+        institution
+        initialDate(formatString: "YYYY-MM")
+        location
+      }
+    }
+  }
+`
+
 const Timeline = () => {
+  const data = useStaticQuery(query)
   return (
     <section
       className="bg-timeline-background bg-center bg-cover bg-fixed h-full"
@@ -18,7 +38,17 @@ const Timeline = () => {
             </h1>
           </Flip>
         </span>
-        <TimelineEvent />
+        {data.allSanityTimeline.nodes.map((node, index) => {
+          const position = index % 2 === 0 ? "left" : "right"
+          return (
+            <VerticalTimeline
+              key={node.id}
+              className="overflow-y-scroll text-gray-100"
+            >
+              <TimelineEvent data={node} position={position} />
+            </VerticalTimeline>
+          )
+        })}
       </div>
     </section>
   )
