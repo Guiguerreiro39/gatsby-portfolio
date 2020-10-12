@@ -32,8 +32,18 @@ body {
   height: 0px;
   background: transparent; /* make scrollbar transparent */
 }
-div.vertical-timeline::before {
-  background-color: #e2e8f0;
+div.vertical-timeline {
+  @media (max-width: 1169px) {
+    padding: 2em 6px;
+    margin: 0;
+  }
+
+  &::before {
+    @media (max-width: 1169px) {
+      left: 24px;
+    }
+    background-color: #e2e8f0;
+  }
 }
 span.vertical-timeline-element-icon {
   box-shadow: 0 0 0 4px #edf2f7, inset 0 2px 0 rgba(0, 0, 0, 0.08),

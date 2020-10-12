@@ -31,9 +31,9 @@ const Timeline = () => {
       id="timeline"
     >
       <div className="bg-gray-800 bg-opacity-75">
-        <span className="flex justify-center">
+        <span className="flex md:justify-center justify-start">
           <Flip cascade right>
-            <h1 className="text-4xl text-gray-100 font-semibold pt-10 border-b-4 border-gray-300 pb-4">
+            <h1 className="text-4xl text-gray-100 font-semibold pt-10 border-b-4 border-gray-300 pb-4 xl:w-auto w-full text-center">
               My Life in a Nutshell
             </h1>
           </Flip>
