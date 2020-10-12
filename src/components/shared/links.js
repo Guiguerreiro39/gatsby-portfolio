@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 //CONSTANTS
 import linkData from "../../constants/link"
 
-const Links = () =>
+const Links = ({ itemStyle }) =>
   linkData.map(link => {
     return (
-      <li className="md:mx-4 md:my-0 my-1">
+      <li className={itemStyle}>
         <Link
           key={link.id}
           to={link.url}

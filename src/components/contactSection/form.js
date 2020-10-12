@@ -5,13 +5,13 @@ const Form = () => (
   <form
     name="contact"
     method="POST"
-    className="text-center px-10 w-full"
+    className="text-center px-10 w-full container m-auto"
     data-netlify="true"
     netlify-honeypot="bot-field"
   >
     <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center mb-10 text-gray-800">
       <LightSpeed cascade left>
-        <div className="flex flex-col m-5">
+        <div className="flex flex-col mr-5 ml-5 lg:ml-0 lg:mr-10">
           <input
             type="text"
             name="name"
@@ -23,14 +23,14 @@ const Form = () => (
             type="email"
             name="email"
             placeholder="Your email *"
-            className="bg-gray-300 bg-opacity-75 p-4 placeholder-gray-600 focus:shadow-outline outline-none my-4"
+            className="bg-gray-300 bg-opacity-75 p-4 placeholder-gray-600 focus:shadow-outline outline-none"
             required
           />
           <input
             type="tel"
             name="phone"
             placeholder="Your phone number"
-            className="bg-gray-300 bg-opacity-75 p-4 placeholder-gray-600 focus:shadow-outline outline-none my-4"
+            className="bg-gray-300 bg-opacity-75 p-4 placeholder-gray-600 focus:shadow-outline outline-none mt-4 lg:mb-0 mb-4"
           />
         </div>
       </LightSpeed>

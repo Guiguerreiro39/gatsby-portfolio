@@ -18,7 +18,7 @@ const Header = () => {
   const NavBar = () => (
     <nav className="text-base font-bold md:flex hidden" id="nav-content">
       <ul className="flex justify-between items-center md:flex-row flex-col">
-        <Links />
+        <Links itemStyle="md:mx-4 md:my-0 my-1" />
         <li className="transform hover:scale-110 duration-300 md:mx-4 md:my-0 my-4">
           <Link
             to="/resume"
