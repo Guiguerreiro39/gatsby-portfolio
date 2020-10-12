@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <main className="text-gray-800">
+    <main className="text-gray-800 overflow-x-hidden">
       <Header />
       {children}
       <Footer />
