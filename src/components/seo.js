@@ -19,6 +19,12 @@ const SEO = ({ title, description, author }) => {
   return (
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
+      <meta
+        http-equiv="Cache-Control"
+        content="no-cache, no-store, must-revalidate"
+      />
+      <meta http-equiv="Pragma" content="no-cache" />
+      <meta http-equiv="Expires" content="0" />
       {/* <meta name="image" content={seo.image} /> */}
       {/* {seo.url && <meta property="og:url" content={seo.url} />} */}
       {/* {(article ? true : null) && <meta property="og:type" content="article" />} */}
