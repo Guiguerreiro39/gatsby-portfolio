@@ -23,7 +23,7 @@ const Contact = ({ email }) => {
   return (
     <BackgroundImage
       id="contact"
-      className="bg-fixed bg-cover bg-center text-gray-100 h-full"
+      className="bg-fixed bg-cover relative bg-center text-gray-100"
       fluid={query.placeholderImage.childImageSharp.fluid}
     >
       <div className="flex flex-col items-center h-full w-full bg-gray-800 bg-opacity-75 py-10">

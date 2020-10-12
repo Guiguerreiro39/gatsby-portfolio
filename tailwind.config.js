@@ -14,7 +14,7 @@ module.exports = {
       }),
       fontSize: theme => ({
         "8xl": "5rem",
-        "7xl": "4.5rem",
+        "7xl": "4.3rem",
       }),
       fill: theme => ({
         red: theme("color.red.500"),
@@ -44,6 +44,7 @@ module.exports = {
     borderWidth: ["first", "responsive", "hover"],
     backgroundOpacity: ["hover", "responsive"],
     backgroundColor: ["hover", "responsive"],
+    backgroundSize: ["responsive"],
     scale: ["responsive", "hover", "focus", "active"],
     width: ["responsive", "hover"],
   },

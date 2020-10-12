@@ -66,12 +66,12 @@ const Hero = ({ email, name }) => {
 
   return (
     <BackgroundImage
-      className="bg-center bg-cover bg-fixed h-screen"
+      className="bg-center bg-cover bg-fixed sm:h-screen relative w-full h-full overflow-x-hidden"
       fluid={query.placeholderImage.childImageSharp.fluid}
       id="hero"
     >
-      <div className="h-full bg-gray-800 bg-opacity-75">
-        <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100 overflow-y-scroll overflow-x-hidden">
+      <div className="h-full bg-gray-800 bg-opacity-75 w-full">
+        <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100">
           <Flip right delay={3000}>
             <ColLeft />
           </Flip>
@@ -79,8 +79,8 @@ const Hero = ({ email, name }) => {
             <HeroText name={name} />
             <Flip right top delay={3000}>
               <Social
-                styleItem="text-2xl md:invisible visible mx-4"
-                styleList="flex justify-center mt-4"
+                styleItem="md:invisible visible mx-4"
+                styleList="text-2xl flex justify-center mt-4"
               />
             </Flip>
             <Roll delay={3000}>
