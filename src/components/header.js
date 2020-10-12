@@ -16,19 +16,18 @@ const Header = () => {
   ])
 
   const NavBar = () => (
-    <nav className="flex justify-between items-center px-8 text-gray-100">
-      <Logo to="/#Hero">GG</Logo>
-      <div className="text-base font-bold flex">
+    <nav className="text-base font-bold md:flex hidden" id="nav-content">
+      <ul className="flex justify-between items-center md:flex-row flex-col">
         <Links />
-        <div className="transform hover:scale-110 duration-300">
+        <li className="transform hover:scale-110 duration-300 md:mx-4 md:my-0 my-4">
           <Link
             to="/resume"
-            className="mx-4 p-2 border-white border-2 rounded hover:border-red-500 hover:text-red-500"
+            className="p-2 border-white border-2 rounded hover:border-red-500 hover:text-red-500"
           >
             Resume
           </Link>
-        </div>
-      </div>
+        </li>
+      </ul>
     </nav>
   )
 
@@ -43,7 +42,9 @@ const Header = () => {
         typeof window !== `undefined` ? window.pageYOffset : null
 
       if (currentScrollpos === 0) {
-        setNavBackground("py-6 absolute")
+        setNavBackground(
+          "py-3 shadow-md md:shadow-none md:py-6 md:bg-transparent bg-gray-800 md:absolute fixed"
+        )
         navRef.current = currentScrollpos + 100
       } else {
         if (navRef.current < currentScrollpos) {
@@ -55,6 +56,10 @@ const Header = () => {
       }
     }
 
+    document.getElementById("nav-toggle").onclick = function () {
+      document.getElementById("nav-content").classList.toggle("hidden")
+    }
+
     document.addEventListener("scroll", handleScroll)
     return () => {
       document.removeEventListener("scroll", handleScroll)
@@ -64,8 +69,26 @@ const Header = () => {
   return (
     <Fade top delay={3000}>
       <header
-        className={`w-full transition-all duration-500 z-10 ${navBackground}`}
+        className={`w-full transition-all duration-500 z-10 flex flex-col md:flex-row justify-between items-center px-8 text-gray-100 ${navBackground}`}
       >
+        <div className="flex justify-between w-full md:w-auto">
+          <Logo to="/#Hero">GG</Logo>
+          <div className="md:hidden block">
+            <button
+              className="flex items-center px-3 py-2 border rounded focus:outline-none"
+              id="nav-toggle"
+            >
+              <svg
+                class="fill-current h-5 w-5"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+        </div>
         <NavBar />
       </header>
     </Fade>

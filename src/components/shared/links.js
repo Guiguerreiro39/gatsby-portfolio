@@ -7,13 +7,15 @@ import linkData from "../../constants/link"
 const Links = () =>
   linkData.map(link => {
     return (
-      <Link
-        key={link.id}
-        to={link.url}
-        className="mx-4 border-red-500 underlineLink pb-1"
-      >
-        {link.name}
-      </Link>
+      <li className="md:mx-4 md:my-0 my-1">
+        <Link
+          key={link.id}
+          to={link.url}
+          className="border-red-500 underlineLink pb-1"
+        >
+          {link.name}
+        </Link>
+      </li>
     )
   })
 

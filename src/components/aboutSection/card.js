@@ -7,7 +7,7 @@ import Line from "../shared/line"
 const Card = ({ icon, title, categories }) => {
   return (
     <div className="relative mb-10 hover:scale-110 transform duration-500">
-      <div className="rounded overflow-hidden shadow-lg bg-gray-200 m-5 col-span-1 h-56">
+      <div className="rounded overflow-hidden shadow-lg bg-gray-200 my-5 mx-5 col-span-1 sm:h-64 md:h-56 lg:h-64 xl:h-56">
         <div
           className="rounded-full w-20 h-20 flex items-center justify-center
           border-none shadow-lg absolute align-middle left-0 right-0 mx-auto bg-red-500 text-4xl"

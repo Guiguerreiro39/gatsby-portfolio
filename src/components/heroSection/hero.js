@@ -20,8 +20,8 @@ const Hero = ({ email, name }) => {
     ></div>
   )
 
-  const ColRight = () => (
-    <div className="col-span-1 flex flex-col items-center justify-end text-lg h-full">
+  const ColLeft = () => (
+    <div className="col-span-1 flex flex-col items-center justify-end text-lg h-full md:visible invisible">
       <Social styleItem="mb-5 hover:-translate-y-1 transform duration-500 hover:text-red-500" />
       <LineVertical />
     </div>
@@ -41,8 +41,8 @@ const Hero = ({ email, name }) => {
     </p>
   )
 
-  const ColLeft = () => (
-    <div className="col-span-1 flex flex-col items-center justify-end h-full">
+  const ColRight = () => (
+    <div className="col-span-1 flex flex-col items-center justify-end h-full md:visible invisible">
       <EmailVertical />
       <LineVertical />
     </div>
@@ -56,16 +56,20 @@ const Hero = ({ email, name }) => {
       <div className="h-screen bg-gray-800 bg-opacity-75">
         <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100">
           <Flip right delay={3000}>
-            <ColRight />
+            <ColLeft />
           </Flip>
           <div className="col-span-10 flex flex-col justify-between pt-40 pb-5">
             <HeroText name={name} />
+            <Social
+              styleItem="text-2xl md:invisible visible mx-4"
+              styleList="flex justify-center"
+            />
             <Roll delay={3000}>
               <Mouse />
             </Roll>
           </div>
           <Flip left delay={3000}>
-            <ColLeft />
+            <ColRight />
           </Flip>
         </div>
       </div>

@@ -12,7 +12,7 @@ const Quote = ({ text }) => (
   <div className="flex flex-col items-center">
     <Line height="2px" width="6rem" />
     <div>
-      <h4 className="text-base">{text}</h4>
+      <h4 className="text-base text-center">{text}</h4>
     </div>
   </div>
 )
@@ -32,14 +32,14 @@ const HeroText = ({ name }) => {
   let typed
   return (
     <div className="items-center flex flex-col">
-      <div>
+      <div className="md:mx-0 mx-32">
         <div>
           <Flip right cascade duration={1000}>
             <p className="pl-2 text-red-500">Howdy, my name is</p>
           </Flip>
         </div>
-        <h1 className="text-8xl">
-          <Fade left cascade delay={1500} duration={1000}>
+        <h1 className="lg:text-8xl text-7xl">
+          <Fade left delay={1500} duration={1000}>
             {name}
           </Fade>
         </h1>
@@ -51,7 +51,7 @@ const HeroText = ({ name }) => {
             typed.start()
           }}
         >
-          <h2 className="ml-10 mb-10 text-4xl">
+          <h2 className="md:ml-10 mb-10 md:text-4xl sm:text-2xl text-xl font-normal">
             <FontAwesomeIcon icon={faTerminal} className="mr-5" />
             <Typed
               loop

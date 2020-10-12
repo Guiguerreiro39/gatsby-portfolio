@@ -10,7 +10,7 @@ import skillData from "../../constants/skill"
 const Skills = () => {
   return (
     <Fade cascade bottom>
-      <ul className="grid grid-cols-3 items-center container m-auto px-20">
+      <ul className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center container m-auto">
         {skillData.map(skill => (
           <li key={skill.id}>
             <Card

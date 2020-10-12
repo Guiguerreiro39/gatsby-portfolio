@@ -9,7 +9,7 @@ $font-logo: "Permanent Marker", cursive;
 
 html {
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   @apply bg-gray-300;
 }
 body {
@@ -57,4 +57,8 @@ span.vertical-timeline-element-icon {
 .underlineLink:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
+}
+#menu-toggle:checked + #menu {
+  display: flex;
+  background-color: red;
 }
