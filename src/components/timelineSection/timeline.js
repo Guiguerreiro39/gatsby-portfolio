@@ -41,7 +41,7 @@ const Timeline = () => {
       fluid={data.placeholderImage.childImageSharp.fluid}
       id="timeline"
     >
-      <div className="bg-gray-800 bg-opacity-75">
+      <div className="bg-gray-800 bg-opacity-75 h-full bg-fixed">
         <span className="flex md:justify-center justify-start">
           <Flip cascade right>
             <h1 className="sm:text-4xl text-3xl text-gray-100 font-semibold pt-10 border-b-4 border-gray-300 pb-4 xl:w-auto w-full text-center">

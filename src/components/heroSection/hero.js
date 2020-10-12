@@ -70,7 +70,7 @@ const Hero = ({ email, name }) => {
       fluid={query.placeholderImage.childImageSharp.fluid}
       id="hero"
     >
-      <div className="h-full bg-gray-800 bg-opacity-75 w-full">
+      <div className="h-full bg-gray-800 bg-opacity-75 bg-fixed">
         <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100">
           <Flip right delay={3000}>
             <ColLeft />
