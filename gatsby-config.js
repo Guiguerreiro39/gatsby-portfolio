@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
     {
@@ -34,6 +34,13 @@ module.exports = {
         rule: {
           include: /svg/,
         },
+      },
+    },
+    {
+      resolve: "gatsby-background-image-es5",
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: "/:",
       },
     },
     `gatsby-plugin-react-helmet`,

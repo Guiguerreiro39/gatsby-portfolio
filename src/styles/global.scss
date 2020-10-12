@@ -10,6 +10,7 @@ $font-logo: "Permanent Marker", cursive;
 html {
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 body {
   min-height: 100%;

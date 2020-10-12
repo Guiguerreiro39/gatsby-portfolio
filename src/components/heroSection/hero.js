@@ -1,6 +1,8 @@
 import React from "react"
 import tw, { css } from "twin.macro"
 import { Roll, Flip } from "react-reveal"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 // COMPONENTS
 import Mouse from "./mouse"
@@ -48,22 +50,39 @@ const Hero = ({ email, name }) => {
     </div>
   )
 
+  const query = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(
+        relativePath: { eq: "images/hero_background.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <section
-      className="bg-hero-background bg-center bg-cover bg-fixed h-screen"
-      id="Hero"
+    <BackgroundImage
+      className="bg-center bg-cover bg-fixed h-screen"
+      fluid={query.placeholderImage.childImageSharp.fluid}
+      id="hero"
     >
-      <div className="h-screen bg-gray-800 bg-opacity-75">
-        <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100">
+      <div className="h-full bg-gray-800 bg-opacity-75">
+        <div className="w-full h-full grid grid-cols-12 gap-4 text-gray-100 overflow-y-scroll overflow-x-hidden">
           <Flip right delay={3000}>
             <ColLeft />
           </Flip>
-          <div className="col-span-10 flex flex-col justify-between pt-40 pb-5">
+          <div className="col-span-10 flex flex-col justify-between md:pt-40 pt-24 pb-5">
             <HeroText name={name} />
-            <Social
-              styleItem="text-2xl md:invisible visible mx-4"
-              styleList="flex justify-center"
-            />
+            <Flip right top delay={3000}>
+              <Social
+                styleItem="text-2xl md:invisible visible mx-4"
+                styleList="flex justify-center mt-4"
+              />
+            </Flip>
             <Roll delay={3000}>
               <Mouse />
             </Roll>
@@ -73,7 +92,7 @@ const Hero = ({ email, name }) => {
           </Flip>
         </div>
       </div>
-    </section>
+    </BackgroundImage>
   )
 }
 

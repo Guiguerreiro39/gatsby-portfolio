@@ -2,6 +2,7 @@ import React from "react"
 import { Flip } from "react-reveal"
 import { useStaticQuery, graphql } from "gatsby"
 import { VerticalTimeline } from "react-vertical-timeline-component"
+import BackgroundImage from "gatsby-background-image"
 
 //COMPONENTS
 import TimelineEvent from "./timelineEvent"
@@ -20,20 +21,30 @@ const query = graphql`
         location
       }
     }
+    placeholderImage: file(
+      relativePath: { eq: "images/timeline_background.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
 const Timeline = () => {
   const data = useStaticQuery(query)
   return (
-    <section
-      className="bg-timeline-background bg-center bg-cover bg-fixed h-full"
+    <BackgroundImage
+      className="bg-center bg-cover bg-fixed h-full"
+      fluid={data.placeholderImage.childImageSharp.fluid}
       id="timeline"
     >
       <div className="bg-gray-800 bg-opacity-75">
         <span className="flex md:justify-center justify-start">
           <Flip cascade right>
-            <h1 className="text-4xl text-gray-100 font-semibold pt-10 border-b-4 border-gray-300 pb-4 xl:w-auto w-full text-center">
+            <h1 className="sm:text-4xl text-3xl text-gray-100 font-semibold pt-10 border-b-4 border-gray-300 pb-4 xl:w-auto w-full text-center">
               My Life in a Nutshell
             </h1>
           </Flip>
@@ -50,7 +61,7 @@ const Timeline = () => {
           )
         })}
       </div>
-    </section>
+    </BackgroundImage>
   )
 }
 

@@ -35,14 +35,14 @@ const HeroText = ({ name }) => {
       <div className="md:mx-0 mx-32">
         <div>
           <Flip right cascade duration={1000}>
-            <p className="pl-2 text-red-500 sm:pl-5">Howdy, my name is</p>
+            <p className="pl-2 text-red-500 sm:pl-5">Hi there! My name is</p>
           </Flip>
         </div>
-        <h1 className="lg:text-8xl text-7xl text-center">
-          <Fade left delay={1500} duration={1000}>
+        <Flip bottom delay={1500} duration={1000}>
+          <h1 className="lg:text-8xl sm:text-7xl text-6xl text-center">
             {name}
-          </Fade>
-        </h1>
+          </h1>
+        </Flip>
         <Flip
           bottom
           delay={3000}
