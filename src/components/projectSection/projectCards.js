@@ -9,7 +9,7 @@ const ProjectCards = ({ nodes }) => {
 
   return (
     <Zoom cascade bottom>
-      <ul className="grid grid-cols-3 py-20">
+      <ul className="grid py-20 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
         <li>
           <CardImage
             title={node.title}

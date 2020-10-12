@@ -39,7 +39,7 @@ const Projects = ({ github }) => {
 
   return (
     <section className="bg-gray-300" id="projects">
-      <div className="container m-auto py-20">
+      <div className="container m-auto py-20 sm:px-0 px-8">
         <Flip cascade bottom>
           <h1 className="text-4xl mb-1 font-bold">My Projects</h1>
         </Flip>

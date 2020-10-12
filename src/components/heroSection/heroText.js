@@ -35,10 +35,10 @@ const HeroText = ({ name }) => {
       <div className="md:mx-0 mx-32">
         <div>
           <Flip right cascade duration={1000}>
-            <p className="pl-2 text-red-500">Howdy, my name is</p>
+            <p className="pl-2 text-red-500 sm:pl-5">Howdy, my name is</p>
           </Flip>
         </div>
-        <h1 className="lg:text-8xl text-7xl">
+        <h1 className="lg:text-8xl text-7xl text-center">
           <Fade left delay={1500} duration={1000}>
             {name}
           </Fade>
@@ -51,7 +51,7 @@ const HeroText = ({ name }) => {
             typed.start()
           }}
         >
-          <h2 className="md:ml-10 mb-10 md:text-4xl sm:text-2xl text-xl font-normal">
+          <h2 className="md:ml-10 mb-10 md:text-4xl sm:text-2xl text-xl font-normal pl-0 sm:pl-5">
             <FontAwesomeIcon icon={faTerminal} className="mr-5" />
             <Typed
               loop
