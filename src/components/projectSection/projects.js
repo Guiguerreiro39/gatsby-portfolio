@@ -13,9 +13,7 @@ const query = graphql`
     allSanityProject {
       nodes {
         title
-        slug {
-          current
-        }
+        demo
         id
         description
         github
