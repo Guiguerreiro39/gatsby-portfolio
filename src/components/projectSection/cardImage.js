@@ -24,11 +24,11 @@ const CardImage = ({ github, demo, image, title, description }) => {
   `
 
   return (
-    <Container className="col-span-1 bg-gray-900 inset text-center relative transition-all duration-300">
-      <Image>
+    <Container className="col-span-1 bg-gray-900 inset text-center relative">
+      <Image className="transition-all duration-500">
         <Img fluid={image} alt={title} className="h-64" />
       </Image>
-      <Text className="transition-all duration-300">
+      <Text className="transition-all duration-500">
         <CardText
           title={title}
           description={description}
