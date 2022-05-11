@@ -4,7 +4,7 @@ import {
   faCode,
   faServer,
   faDatabase,
-  faRobot,
+  faCogs,
 } from "@fortawesome/free-solid-svg-icons"
 
 const skillData = [
@@ -31,8 +31,8 @@ const skillData = [
   {
     id: 3,
     icon: faServer,
-    title: "Server-Side Development",
-    categories: ["Python/Django", "Express/Node.js", "ASP.NET"],
+    title: "Back-End Development",
+    categories: ["Python/Django", "Express/Node.js", "Golang"],
   },
   {
     id: 4,
@@ -48,9 +48,9 @@ const skillData = [
   },
   {
     id: 6,
-    icon: faRobot,
-    title: "Machine Learning",
-    categories: ["Scikit-learn", "TensorFlow"],
+    icon: faCogs,
+    title: "Formal Methods",
+    categories: ["TLA+", "VDM++", "COQ", "Alloy", "NuSMV"],
   },
 ]
 

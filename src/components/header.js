@@ -4,7 +4,10 @@ import tw, { styled, css } from "twin.macro"
 import variables from "../styles/global.scss"
 import { Fade } from "react-reveal"
 
-// COMPONENTS
+// FILES
+import CV from "../assets/files/Guilherme-Guerreiro-CV.pdf"
+
+// Components
 import Links from "./shared/links"
 
 const Header = () => {
@@ -20,12 +23,13 @@ const Header = () => {
       <ul className="flex justify-between items-center md:flex-row flex-col">
         <Links itemStyle="md:mx-4 md:my-0 my-1" />
         <li className="transform hover:scale-110 duration-300 md:mx-4 md:my-0 my-4">
-          <Link
-            to="/resume"
+          <a
+            href={CV}
+            download
             className="p-2 border-white border-2 rounded hover:border-red-500 hover:text-red-500"
           >
             Resume
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

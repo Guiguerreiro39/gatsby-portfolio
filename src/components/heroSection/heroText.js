@@ -5,6 +5,9 @@ import { faTerminal } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import { Flip, Fade } from "react-reveal"
 
+//FILES
+import CV from "../../assets/files/Guilherme-Guerreiro-CV.pdf"
+
 //COMPONENTS
 import Line from "../shared/line"
 
@@ -17,16 +20,23 @@ const Quote = ({ text }) => (
   </div>
 )
 
-const HeroButton = ({ to, text }) => (
-  <div className="hover:scale-110 duration-300 transform mx-2">
-    <Link
-      to={to}
-      className="py-2 px-3 border-2 font-bold rounded-md hover:border-red-500 hover:text-red-500 text-base"
-    >
-      {text}
-    </Link>
-  </div>
-)
+const HeroButton = ({ to, text, download = false }) => {
+  const style =
+    "py-2 px-3 border-2 font-bold rounded-md hover:border-red-500 hover:text-red-500 text-base"
+  return (
+    <div className="hover:scale-110 duration-300 transform mx-2">
+      {download ? (
+        <a href={to} className={style} download>
+          {text}
+        </a>
+      ) : (
+        <Link to={to} className={style}>
+          {text}
+        </Link>
+      )}
+    </div>
+  )
+}
 
 const HeroText = ({ name }) => {
   let typed
@@ -78,7 +88,7 @@ const HeroText = ({ name }) => {
       <Flip top delay={3000}>
         <div className=" flex items-center mb-10">
           <HeroButton to="/#contact" text="Call me, maybe" />
-          <HeroButton to="/projects" text="My CV" />
+          <HeroButton to={CV} download={true} text="My CV" />
         </div>
       </Flip>
       <Fade delay={3000}>
