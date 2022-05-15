@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 import tw, { styled, css } from "twin.macro"
-import variables from "../styles/global.scss"
 import { Fade } from "react-reveal"
 
 // FILES
@@ -14,7 +13,7 @@ const Header = () => {
   const Logo = styled(Link)([
     tw`text-2xl hover:text-red-500`,
     css`
-      font-family: ${variables.fontLogo};
+      font-family: "Permanent Marker", cursive;
     `,
   ])
 
