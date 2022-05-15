@@ -6,6 +6,9 @@ module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     extend: {
+      screens: theme => ({
+        mobile: { min: "0px", max: "640px" },
+      }),
       backgroundImage: theme => ({
         "hero-background": 'url("../assets/images/hero_background.jpg")',
         "contact-background": 'url("../assets/images/contact_background.jpg")',

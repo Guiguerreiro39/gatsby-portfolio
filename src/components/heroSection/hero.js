@@ -66,7 +66,7 @@ const Hero = ({ email, name }) => {
 
   return (
     <BackgroundImage
-      className="bg-center bg-cover bg-fixed sm:h-screen relative w-full h-full overflow-x-hidden"
+      className="bg-center bg-cover bg-fixed relative w-full h-screen overflow-x-hidden"
       fluid={query.placeholderImage.childImageSharp.fluid}
       id="hero"
     >
@@ -75,12 +75,12 @@ const Hero = ({ email, name }) => {
           <Flip right delay={3000}>
             <ColLeft />
           </Flip>
-          <div className="col-span-10 flex flex-col justify-between md:pt-40 pt-24 pb-5">
+          <div className="col-span-10 flex flex-col justify-between mobile:justify-center sm:justify-center md:pt-40 pt-24 pb-5">
             <HeroText name={name} />
             <Flip right top delay={3000}>
               <Social
                 styleItem="md:invisible visible mx-4"
-                styleList="text-2xl flex justify-center mt-4"
+                styleList="text-4xl flex justify-center mt-20"
               />
             </Flip>
             <Roll delay={3000}>
