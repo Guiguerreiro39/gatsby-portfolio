@@ -75,7 +75,7 @@ const Hero = ({ email, name }) => {
           <Flip right delay={3000}>
             <ColLeft />
           </Flip>
-          <div className="col-span-10 flex flex-col justify-between mobile:justify-center sm:justify-center md:pt-40 pt-24 pb-5">
+          <div className="col-span-10 flex flex-col justify-between md:pt-40 pt-24 pb-5">
             <HeroText name={name} />
             <Flip right top delay={3000}>
               <Social
