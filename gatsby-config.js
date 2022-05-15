@@ -43,7 +43,6 @@ module.exports = {
         specialChars: "/:",
       },
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
