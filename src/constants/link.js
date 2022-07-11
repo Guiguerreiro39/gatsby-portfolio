@@ -19,6 +19,11 @@ const linkData = [
     name: "Contact",
     url: "/#contact",
   },
+  {
+    id: 5,
+    name: "Blog",
+    url: "https://blog.guilhermegr.com"
+  }
 ]
 
 export default linkData
